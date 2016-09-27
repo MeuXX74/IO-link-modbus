@@ -8,7 +8,7 @@ The
 The following hardware is required:
 
 * [AY1020](http://www.ifm.com/products/us/ds/AY1020.htm) (IO-Link Master)﻿
-* [VTV122](http://www.ifm.com/products/us/ds/VTV122.htm) (Vibration Transmitter)
+* [KQ5100](http://www.ifm.com/products/uk/ds/KQ5100.htm) (Capacitive Sensor)
 * [UGT509](http://www.ifm.com/products/gb/ds/UGT509.htm) (Ultrasonic Sensor)
 
 Open a browser and introduce 
@@ -18,6 +18,8 @@ A 192.168.2.5
 ## Installation & Configuration
 
 ### Setting Up the Hardware
+
+**NOTE:** For advanced settings and more detailed descriptions, please refer to the [AY1020 IO-Link Master user's manual](https://www.ifm.com/download/files/AY1020_Manual_UK/$file/AY1020_Manual_UK.pdf).
 
 The UGT509 (Vibration sensor) will be connected to the IO-Link Master using an EVT402 cable, which is included in the kit. In this documentation, this sensor will be connected to Port 7 of the IO-Link Master, but another port can be used if necessary. The EVT402 has 4x wires, each one connected to one of the pins of the sensor: Brown (1), white (2), blue (3) and black (4). These wires have to be connected to the IO-Link Master, as shown below:
 
