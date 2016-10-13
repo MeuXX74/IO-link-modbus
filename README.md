@@ -60,7 +60,9 @@ And on the side of the IO-Link Master, like this:
 
 **NOTE:** For advanced settings and more detailed descriptions, please refer to the [AY1020 IO-Link Master user's manual](https://www.ifm.com/download/files/AY1020_Manual_UK/$file/AY1020_Manual_UK.pdf).
 
-The UGT509 (Vibration sensor) will be connected to the IO-Link Master using an EVT402 cable, which is included in the kit. In this documentation, this sensor will be connected to Port 7 of the IO-Link Master, but another port can be used if necessary. The EVT402 has 4x wires, each one connected to one of the pins of the sensor: Brown (1), white (2), blue (3) and black (4). These wires have to be connected to the IO-Link Master, as shown below:
+The **UGT509 (ultrasonic sensor)** will be connected to the IO-Link Master using an **EVC001 cable**, which is included in the kit. First, connect the ultrasonic sensor to the mentioned cable, and secure the nut gently.
+ 
+In this documentation, this sensor will be connected to Port 7 of the IO-Link Master, but another port can be used if necessary. The EVC001 cable has 4x wires, each one connected to one of the pins of the sensor: Brown (1), white (2), blue (3) and black (4). These wires have to be connected to the IO-Link Master, as shown below:
 
 ```
     SENSOR   |   PORT 7
@@ -69,6 +71,38 @@ The UGT509 (Vibration sensor) will be connected to the IO-Link Master using an E
      White ----- NC (Not Connected)
      Black ----- Pin 4
 ```
+
+Now, let's do the same with the **TA2105 (temperature sensor)**. This part will be wired to the IO-Link Master using a **cable of the same type, an EVC001**. Attach the cable to the sensor to proceed.
+
+We'll be connecting this sensor to Port 3 of the IO-Link Master, but as happens with the ultrasonic sensor, this is up to the user. The wires of the EVC001 cable have to be connected to the IO-Link Master as follows:
+
+```
+    SENSOR   |   PORT 3
+     Brown ----- Pin 1
+      Blue ----- Pin 2
+     White ----- NC (Not Connected)
+     Black ----- Pin 4
+```
+
+The last sensor on the list is the **KQ5100 (capacitive sensor)**. It comes with its own cable already, and there's no need to attach an additional cable.
+
+This sensor will be connected to Port 4 of the IO-Link Master, but again, it can be hooked to a different port if required. The wires of this sensor follow the the same color code as in the EVC001 cable, so the pin allocation is easy to guess:
+
+```
+    SENSOR   |   PORT 4
+     Brown ----- Pin 1
+      Blue ----- Pin 2
+     White ----- NC (Not Connected)
+     Black ----- Pin 4
+```
+
+The last step is to connect the IO-Link Master to the computer (or to the local network) via Ethernet in order to run the configuration tool, verify that the sensors are working properly, and start reading data via Modbus, so it can be published onto the relayr Cloud.
+
+First, connect an Ethernet cable to one of the ports marked as "10/100 Network" 
+
+# ------ [ TBC ] ------
+
+![](./assets/master_ethernet.jpg)
 
 ### Setting Up the Software
 
