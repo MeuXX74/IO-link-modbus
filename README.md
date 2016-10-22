@@ -20,9 +20,9 @@ The following hardware is required:
 * 24V Power Supply (this setup has been implemented using a [Siemens SITOP PSU100S 6EP1334-2BA20](https://mall.industry.siemens.com/mall/en/ww/Catalog/Product/6EP1334-2BA20))
 * Power Cord
 * Assorted Wires for 24V Supply
-* Cable cutter and small 
+* Cable cutter and small screwdriver
 
-A computer is required to access the web server configuration menu of the IO-Link Master and to publish the Modbus data of the sensors onto the relayr Cloud.
+A computer is required to access the web server configuration menu of the IO-Link Master and (if no gateway is available) also to publish the Modbus data of the sensors onto the relayr Cloud.
 
 ## Installation & Configuration
 
