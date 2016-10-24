@@ -128,7 +128,7 @@ If the IO-Link Master is required to have a different IP address (because it wil
 
 ### Setting Up the Software
 
-**NOTE:** If instead of a computer you are using a gateway running a Vertex distribution with a built-in Modbus adapter, please refer to the [Vertex documentation](https://github.com/relayr/vertex/blob/master/docs/vertex_DSK_readme.md).
+**NOTE:** If instead of a computer you are using a gateway running a Vertex distribution with a built-in Modbus adapter, please refer to the [Vertex documentation](http://docs.relayr.io/iot-starter-kits/dsk/vertex).
 
 Once the IO-Link Master is up and running, we will configure the software adapter to read data via Modbus and push it to the relayr Cloud. In this case we will be using the open source tool Node-RED, and an additional library for the Modbus TCP communication.
 
