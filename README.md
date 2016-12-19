@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**[IO-Link](http://www.io-link.com/en/Technology/what_is_IO-Link.php)** is an industrial communication stardard for connecting intelligent sensors and actuators. Due to its simplicity and ease of use, it's the perfect choice for quickly implementing an industrial IoT setup.
+**[IO-Link](http://www.io-link.com/en/Technology/what_is_IO-Link.php)** is an industrial communication standard for connecting intelligent sensors and actuators. Due to its simplicity and ease of use, it's the perfect choice for quickly implementing an industrial IoT setup.
 
 This tutorial will help you connect the IO-Link Master and sensors included in the **Industrial IoT Starter Kit**, pull data via Modbus and publish it to the relayr Cloud via MQTT. In order to collect the data from the fieldbus and send it to the cloud, ideally we will use a Vertex-enabled gateway (for advanced users), or at least a computer capable of running a Modbus software adapter, i.e. a set of libraries (for beginners).
 
