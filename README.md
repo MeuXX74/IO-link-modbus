@@ -205,7 +205,7 @@ This means that Node-RED is running locally, and we can start adding our flows. 
 
 ### Importing Flows
 
-Now we will add our first flow, which will help us read data from the UGT509 (ultrasonic sensor). In Node-RED, the flows can be **imported** (and exported) using JSON format. For the sake of simplicity, the flows needed to implement this example are available in this repository, and ready to use. Navigate to the [flows folder](./node-red_flows) and copy the first flow: `UGT509_ultrasonic_sensor.json`.
+Now we will add our first flow, which will help us read data from the UGT509 (ultrasonic sensor). In Node-RED, the flows can be **imported** (and exported) using JSON format. For the sake of simplicity, the flows needed to implement this example are available in this repository, and ready to use. Navigate to the [flows folder](./node-red_flows) and copy the following flow: `UGT509_ultrasonic_sensor.json`.
 
 In Node-RED, click on the button in the top right corner and select `Import` → `Clipboard`, as shown below:
 
@@ -216,6 +216,8 @@ On the next window, paste the raw content of the file `UGT509_ultrasonic_sensor.
 As a result, the workspace should look like this:
 
 ![Flow imported](./assets/node-red_imported_flow.png)
+
+Note the `Exception` node pictured above. The ultrasound sensor will be saturated if the readings are out of range, providing a maximum value by default. This node acts as a very simple filter, making sure that only valid readings are sent to the relayr Cloud. Such exception is only necessary for this particular sensor, and it's not included in the flows for the other two sensors.
 
 ### Parameters
 
@@ -251,16 +253,21 @@ In this window, we can enter our MQTT username and password. **For the sake of s
 
 Once ready, click on **"Update"** to save your changes and close this menu. On the next menu, click on **"Done."**
 
-We're almost there! Now simply **click on the prominent red button in the top right corner which reads "Deploy."** The flow will start reading data via Modbus from the sensor, create and format the payload, and aggregate it to the relayr Cloud via MQTT. To see the live values, just navigate to the Developer Dashboard.
+We're almost there! Now simply **click on the prominent red button in the top right corner which reads "Deploy."** The flow will start reading data via Modbus from the sensor, create and format the payload, and aggregate it to the relayr Cloud via MQTT. To see the live values, just navigate to the [Developer Dashboard](https://dev.relayr.io), and select the device added previously (AY1020 IO-Link Master).
 
 **NOTE:** If you are using a Vertex-enabled gateway, click on the "Connection" tab when configuring the MQTT credentials. In the field labeled "Server," you must enter the IP address of your Vertex gateway instead of the main broker address of the relayr Cloud (i.e. `mqtt.relayr.io`). For more information, please refer to step 8 of the section ["Configuration & Onboarding"](https://github.com/relayr/vertex/blob/master/docs/vertex_DSK_readme.md#configuration--onboarding) as described in the Vertex documentation.
+
+### Importing Flows for All Sensors at Once
+
+The previous example shows how to deploy and configure the flow of one of the IO-Link sensors, in this case the ultrasonic sensor, using the `UGT509_ultrasonic_sensor.json`.
+
+However, for convenience, **it's also possible to import flows to get readings from the three sensors at the same time**. For that, simply use the file `all_sensors.json` instead, which can be found in the [flows folder](./node-red_flows) as well.
 
 ## TO DO
 
 * Add introduction about Modbus.
 * Add flows for the other two sensors.
-* Add a flow that combines all sensors in one.
-* Improve the flow of the UGT509 (ultrasonic sensor), so it filters the data triggering a flag when the readings are out of range.
+* Improve the flow of the UGT509 (ultrasonic sensor), so it sets a flag when the readings are out of range.
 * Optional: Add a quick testing procedure using the app "Modbus Probe."
 
 ## License
